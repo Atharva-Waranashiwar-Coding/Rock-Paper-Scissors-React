@@ -12,6 +12,7 @@ A classic Rock Paper Scissors game built using React. Play against the computer,
     - [Game Rules](#game-rules)
     - [Technologies Used](#technologies-used)
     - [Project Structure](#project-structure)
+    - [Hosted Application](#hosted-application)
 
 ## Getting Started
 
@@ -87,3 +88,11 @@ If you want to customize the build configuration, run `npm run eject` to remove 
     │
     ├── package.json             # Project dependencies and scripts
     └── README.md                # Project documentation
+
+### Hosted Application
+You can check out the live version of the game at:
+
+Live Demo - https://rockpaperscissorsaw.netlify.app/
+
+Feel free to play and share!
+    
