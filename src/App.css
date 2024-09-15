@@ -91,6 +91,7 @@ body {
     }
 }
 
+/* Mobile screen adjustments for screens smaller than 480px */
 @media (max-width: 480px) {
     .container {
         padding: 15px;
@@ -98,7 +99,8 @@ body {
 
     .weapons {
         flex-direction: column;
-        gap: 15px;
+        align-items: center; /* Center the weapon buttons */
+        gap: 15px; /* Add space between the buttons */
     }
 
     .weapons button {
@@ -115,3 +117,4 @@ body {
         font-size: 12px;
     }
 }
+
