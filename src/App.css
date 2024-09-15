@@ -1,6 +1,5 @@
-*,
-*:before,
-*:after {
+/* Reset and box-sizing */
+*, *:before, *:after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,66 +7,111 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(135deg, #ffcf1b, #ff8b1b);
+    background: linear-gradient(
+        135deg,
+        #ffcf1b,
+        #ff8b1b
+    );
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .container {
-    width: 45%;
-    min-width: 500px;
+    width: 90%;
+    max-width: 500px;  /* Ensure max width for larger screens */
     background-color: #ffffff;
     padding: 40px 30px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
     border-radius: 10px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 .scores {
-    margin-bottom: 50px;
-    text-align: right;
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 
 .weapons {
-    width: 90%;
-    margin: auto;
     display: flex;
     justify-content: space-around;
+    margin: 20px auto;
 }
 
 .weapons button {
     background-color: #ffd51b;
     color: #000000;
     border: none;
-    font-size: 50px;
-    height: 100px;
-    width: 100px;
+    font-size: 40px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
-    outline: none;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.weapons button:hover {
+    transform: scale(1.1);
 }
 
 .details {
     margin-top: 30px;
-    text-align: center;
-}
-
-.scores,
-.details {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
 }
 
 #result {
-    width: 180px;
-    padding: 10px 0;
-    margin: 30px auto;
     font-weight: 600;
     letter-spacing: 0.5px;
+    margin-top: 20px;
 }
 
-span {
-    font-weight: 600;
+/* Responsive adjustments for smaller screens (mobile) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .weapons button {
+        height: 60px;
+        width: 60px;
+        font-size: 30px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+
+    .scores {
+        font-size: 14px;
+    }
+
+    .details p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .weapons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .weapons button {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+
+    .scores, .details p {
+        font-size: 12px;
+    }
 }
